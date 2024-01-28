@@ -1,0 +1,338 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+    color: #fff;
+}
+
+.header {
+    background-color: #333;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 25px 0;
+}
+
+h1 {
+    color: #ffdd00;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 36px;
+}
+
+/* Navigation Menu */
+.navigation-menu {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding:20px;
+    /* background-color: rgba(0, 0, 0, 0.85); */
+    margin-bottom: 20px;
+
+    font-weight: bold;
+    text-transform: uppercase;
+}
+@keyframes gradient-background {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+    75% {
+        background-position: 0% 50%;
+    }
+}
+
+.navigation-menu {
+    /* Other styles... */
+    background: linear-gradient(-50deg, #ff758c, #ff7eb3, #ffb300, #302dff);
+    background-size: 400% 400%;
+    animation: gradient-background 7.5s ease infinite;
+}
+
+/* Interactive Hover Effects on Menu Items */
+.menu-item:hover {
+    color: #8f2106;
+    text-decoration: underline;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.sub-menu a:hover {
+    background-color: #4745bb;
+    color: #fff;
+}
+
+.menu-item {
+    margin: 0 20px;
+    padding: 10px 20px;
+    position: relative;
+    color: #ffdd00;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Submenu */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.sub-menu a {
+    display: block;
+    color: #ff758c;
+    padding: 12px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.sub-menu a:hover {
+    background-color: #302dff;
+}
+
+.sub-menu-level2 {
+    position: relative;
+}
+
+.sub-sub-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    border-radius: 15px;
+}
+
+/* Display submenus on hover */
+.menu-item:hover .sub-menu,
+.sub-menu-level2:hover .sub-sub-menu {
+    display: block;
+}
+
+/* Responsive design for navigation */
+@media screen and (max-width: 600px) {
+    .navigation-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item {
+        margin: 10px 0;
+    }
+}
+
+
+
+main {
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 30px;
+    background-color: rgba(47, 6, 6, 0.85);
+    margin: 30px auto;
+    max-width: 900px;
+    border-radius: 25px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    .nav, .navigation_menu {
+        flex-direction: column;
+    }
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.image-code figcaption {
+    color: #ffdd00;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+.image-code {
+    display: flex;
+    font-weight: bold;
+    color: #ffdd00;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-top: 25px;
+    height: 250px;
+    border: 1px solid #ffdd00;
+    border-radius: 25px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    padding-left:10px;}
+
+.image-code  img{
+    image-resolution: from-image;
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    border-radius: 25px;
+    width: auto;
+}
+
+.image-code  img:hover {
+    transform: scale(2.2);
+}
+.week1 {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    color: #ff758c;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+
+footer {
+    padding: 20px;
+    text-align: center;
+    margin-top: 25px;
+    color: #ffdd00;
+    background-color: #40000b;
+    border-radius: 25px;
+}
+
+.external_links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    color: #ffdd00;
+}
+
+.external_links_logos img {
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+    width: 45px;
+    height: 45px;
+}
+
+.topic {
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
+
+@media screen and (max-width: 600px) {
+    .week-summary h2 {
+        font-size: 24px;
+    }
+    .topic {
+        margin-bottom: 15px;
+    }
+}
+
+.week-summary h2 {
+    font-size: 28px;
+    color: #ffcc00;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.topic h3 {
+    font-size: 24px;
+    color: #ffcc00;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.topic h4 {
+    font-size: 20px;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.personal-info p {
+    font-size: 18px;
+    color: #ffcc00;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container-aboutme h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a:any-link:active {
+        color: #ffcc00;
+        }
+
+.JavaScript-Challenges h2 {
+    font-size: 28px;
+    color: #ffcc00;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.JavaScript-Challenges code {
+    font-size: 18px;
+    color: #00ff22;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.JavaScript-Challenges .topic:hover {
+    transform: scale(1.1);
+}
+
+.topic code {
+    font-size: 18px;
+    color: #00ff22;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+}
