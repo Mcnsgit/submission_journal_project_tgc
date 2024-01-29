@@ -20,7 +20,58 @@ h1 {
     letter-spacing: 3px;
     font-size: 36px;
 }
+/* CSS */
+.hero {
+    position: relative;
+    height: 100vh; /* Set the height of the hero section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    padding: 10px;
+    overflow: hidden; /* Prevents the background image from overflowing */
+}
 
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover; /* Ensures the image covers the entire hero section */
+    z-index: -1; /* Places the image behind the text and button */
+}
+
+.hero h1,
+.hero p, 
+.hero button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 1; /* Ensures text and button stay above the background image */
+    font-size: 48px; /* Adjust font size as needed */
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px; /* Adjust spacing as needed */
+}
+
+.hero button {
+    background-color: #ffdd00;
+    border: none;
+    color: #333;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+
+
+}
 /* Navigation Menu */
 .navigation-menu {
     display: flex;
