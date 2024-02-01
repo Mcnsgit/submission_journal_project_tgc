@@ -39,17 +39,17 @@ function loadNavigation() {
         <div class="menu-item">
             <span>TGC - Software Development Course</span>
             <div class="sub-menu">
-                <a href="/pages/weeks/week1.html">Week 1</a>
-                <a href="/pages/weeks/week2.html">Week 2</a>
-                <a href="/pages/weeks/week3.html">Week 3</a>
-                <a href="/pages/weeks/week4.html">Week 4</a>
-                <a href="/pages/weeks/week5.html">Week 5</a>
-                <a href="/pages/weeks/week6.html">Week 6</a>
-                <a href="/pages/weeks/week7.html">Week 7</a>
-                <a href="/pages/weeks/week8.html">Week 8</a>
-                <a href="/pages/weeks/week9.html">Week 9</a>
-                <a href="/pages/weeks/week10.html">Week 10</a>
-                <a href="/pages/weeks/week11.html">Week 11</a>
+                <a href="pages/weeks/week1.html">Week 1</a>
+                <a href="pages/weeks/week2.html">Week 2</a>
+                <a href="pages/weeks/week3.html">Week 3</a>
+                <a href="pages/weeks/week4.html">Week 4</a>
+                <a href="pages/weeks/week5.html">Week 5</a>
+                <a href="pages/weeks/week6.html">Week 6</a>
+                <a href="pages/weeks/week7.html">Week 7</a>
+                <a href="pages/weeks/week8.html">Week 8</a>
+                <a href="pages/weeks/week9.html">Week 9</a>
+                <a href="pages/weeks/week10.html">Week 10</a>
+                <a href="pages/weeks/week11.html">Week 11</a>
             </div>
         </div>
         <div class="menu-item">
@@ -64,4 +64,5 @@ function loadNavigation() {
     </nav>`;
     document.getElementById('navigation-placeholder').innerHTML = navHtml;
 }
-  
+
+loadNavigati
