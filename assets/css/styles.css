@@ -157,7 +157,7 @@ h1 {
 }
 
 .sub-menu a:hover {
-    background-color: #4745bb;
+    background-color: #ffdd00;
     color: #fff;
     border-radius: 15px;
 }
@@ -192,7 +192,7 @@ h1 {
 }
 
 .sub-menu a:hover {
-    background-color: #302dff;
+    background-color: #2dffea;
 }
 
 .sub-menu-level2 {
@@ -372,7 +372,7 @@ a:hover, .menu-item:hover, .external-links a:hover {
 }
 
 .task:hover, .topic article:hover {
-    background-color: #5652bf; /* Slightly lighter shade for hover */
+    background-color: #41fff2; /* Slightly lighter shade for hover */
     cursor: pointer;
 }
 
