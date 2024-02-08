@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>Week 4 - </title>
 </head>
+
 <body>
     <header>
         <div class="header">
@@ -88,11 +90,13 @@
                 <div class="dom-code">
                     <h3> Event Listeners</h3>
                     <ul>
-                        <li> Create a variable called 'heading' and assign the element with the ID of 'heading' to it</li>
-                        <li> Do the same for the 'input' and 'button' element</li> 
+                        <li> Create a variable called 'heading' and assign the element with the ID of 'heading' to it
+                        </li>
+                        <li> Do the same for the 'input' and 'button' element</li>
                         <li> Create a variable called 'image' and assign the element with the ID of 'image' to it</li>
                         <li> Do the same for the 'input' and 'button' element</li>
-                        <li> Add an event listener that changes the source of the image when the "submit" button is clicked</li>
+                        <li> Add an event listener that changes the source of the image when the "submit" button is
+                            clicked</li>
                     </ul>
                     <pre>
                         <code>
@@ -107,10 +111,81 @@
                     </pre>
                 </div>
             </div>
+            <div class="topic">
+                <h2>SQL vS noSQL</h2>
+                <p>SQL is a 'declarative' programming language used to manage and manipulate data stored in relational
+                    databases.</p>
+                <p>SQL is used to create, modify, and query relational databases, which organize data into tables
+                    consisting of rows and columns</p>
+                <p>SQL is a Standard language used across different database management systems (DBMS) such as; Oracle,
+                    MySQL, Microsoft SQL Server, PostgreSQL.Widely used in various industries and application:
+                <ul>
+                    <li>Banking systems</li>
+                    <li>Healthcare</li>
+                    <li>e-commerce websites</li>
+                </ul>
+                </p>
+                <o>
+                    <h3>MongoDB</h3>
+                    <ul>
+                        <li><mark>Open Source</mark></li>
+                        <li><mark>Uses JSON-like documents</mark></li>
+                        <li><mark>Highly Scalable and Flexible</mark></li>
+                        <li><mark>No pre-defines schemas</mark></li>
+                        <li><mark>Tables and data structures are mutable</mark></li>
+                        <li><mark>Can run on a single server, or can be distributed</mark></li>
+                    </ul>
+                    </p>
+                    <label for="mongosh">Mongo Shell:</label>
+                    <textarea name="mongosh" id="mongosh" placeholder="Enter your MongoDB commands here"></textarea>
+                    <h3>Syntax</h3>
+                    <h4>Looking at the data</h4>
+
+                    <p>selct database: use <database name>
+                            find data: db.<collection>.find()
+
+
+                                add a record: db.author.insertOne ({data})
+
+                                Adding multiples:db. Author.insertMany ([ {document 1}, {document 2} ])
+
+                                <li>Create a new collection: db.createCollection ('<collection name>')<br>
+                                        e.g: db.createCollection("Books")</li>
+                                <li>Classified: Internal Personal and Confidential
+
+                                    Update:
+
+                                    The MongoDB shell provides the following methods to update documents in a
+                                    collection:
+
+                                    To update a single document:
+                                    • To update multiple documents:
+                                    • To replace a document: db.collectionname.updateOne()
+                                    db.collection name.updateMany)
+                                    db.collection name.replaceOne()
+
+                                    Library> db. Author.updateOne({surname: "Feist"}, {$set: = DOB: "23/12/1945"})</li>
+
+                                <li>Delete
+
+                                    • To delete multiple documents: db.collectionname.deleteMany().
+                                    • To delete a single document: db.collectionname.deleteOne).
+
+                                    db.Author.deleteOne( { surname: "Feist" } )
+                                </li>
+                                <li>References:
+                                    https://www.mongodb.com/docs/manual/
+                                    https://www.w3schools.com/mongodb/index.php
+                                </li>
+
+                    </p>
+                    </textarea>
+                    
+            </div>
         </section>
     </main>
     <footer>
-        <div class="external_links"> 
+        <div class="external_links">
             <a href="https://www.github.com/mcnsgit" title="GitHub Profile">
                 <img src="/assets/images/iconmonstr-github-5.svg" alt="GitHub Logo">
             </a>
@@ -121,4 +196,5 @@
         <p>© 2024 Journal by Miguel Cardiga. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
