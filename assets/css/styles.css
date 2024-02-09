@@ -2,9 +2,16 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: repeating-conic-gradient( #52df27 10%, #240169 20%, #d74177 30% );
+    border-radius: 50%;
+    margin: 0;
     color: #fff;
-}
+}    
+
+
 .hero {
     position: relative;
     height: 100vh;
@@ -81,31 +88,43 @@ body {
     text-align: center;
     padding: 15px 0;
 }
-
-.skills-container{
+.skills-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  background-color: #ffffff;
-  border-radius: 15px;
-  margin-bottom: 10px;
-
-}
-.skill {
-   display: flex;
-    align-items: center;
-    justify-content:space-evenly;
-    flex-direction:column;
-    place-items: center;
-    margin: 15px;
-    padding: 15px;
+    grid-template-columns: repeat(3, 1fr); /* Create three columns */
+    grid-gap: 15px; /* Gap between squares */
+    background-color: #fff;
     border-radius: 15px;
-    background-color: #4745bb;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    height: auto; /* Adjust based on content */
+    width: 900px; /* Adjust if necessary */
+    overflow: auto;
+    justify-content: center; /* Center grid items */
+    margin-bottom: 10px;
 }
+
+.skills-container > div {
+    height: 100px; /* Set the height of each square */
+    background-color: #4745bb; /* Square color */
+    border-radius: 15px; /* Square border radius */
+    padding: 15px; /* Padding inside squares, adjust if images are larger */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Optional: Adds shadow for depth */
+    display: flex; /* Center the image inside the square */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    color: #fff; /* Text color, if you add text */
+    font-size: 16px; /* Text size, if you add text */
+}
+
+.skills-container > div img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create three columns */
+    grid-gap: 15px; /* Gap between squares */
+    width: 100%; /* Make the image fill the div */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100px; /* Set a maximum height for consistency */
+}
+
 
 
 h1 {
