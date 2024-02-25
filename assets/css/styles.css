@@ -5,7 +5,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: repeating-conic-gradient( #52df27 10%, #240169 20%, #d74177 30% );
+
+    
+    background: conic-gradient( #52df27 30%, #240169 50%, #d74177 70%, #52df27 100%);
     border-radius: 50%;
     margin: 0;
     color: #fff;
@@ -89,40 +91,35 @@ body {
     padding: 15px 0;
 }
 .skills-container {
+    margin:auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Create three columns */
-    grid-gap: 15px; /* Gap between squares */
-    background-color: #fff;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 15px; /* Gap between items */
+    background-color: #3c0253;
     border-radius: 15px;
     padding: 10px;
-    height: auto; /* Adjust based on content */
-    width: 900px; /* Adjust if necessary */
+    width: 650px; /* Fixed width */
     overflow: auto;
-    justify-content: center; /* Center grid items */
-    margin-bottom: 10px;
 }
 
 .skills-container > div {
-    height: 100px; /* Set the height of each square */
+    height: 100px; /* Fixed height */
+    width: 100px; /* Fixed width */
     background-color: #4745bb; /* Square color */
-    border-radius: 15px; /* Square border radius */
-    padding: 15px; /* Padding inside squares, adjust if images are larger */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Optional: Adds shadow for depth */
-    display: flex; /* Center the image inside the square */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    text-align: center;
-    color: #fff; /* Text color, if you add text */
-    font-size: 16px; /* Text size, if you add text */
+    border-radius: 15px;
+    padding: 15px; /* Padding inside squares */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+    display: flex;
+    margin: auto;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    color: #fff; /* Text color */
+    font-size: 16px; /* Text size */
 }
 
 .skills-container > div img {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Create three columns */
-    grid-gap: 15px; /* Gap between squares */
-    width: 100%; /* Make the image fill the div */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 100px; /* Set a maximum height for consistency */
+    max-width: 70%; /* Adjust based on preference */
+    max-height: 70px; /* Adjust to fit within the div properly */
 }
 
 
@@ -262,7 +259,7 @@ div .topic {
 
 main {
     padding: 30px;
-    background-color: rgba(47, 6, 6, 0.85);
+    background-color: rgba(11, 10, 10, 0.85);
     margin: 30px auto;
     max-width: 900px;
     border-radius: 25px;

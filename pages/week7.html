@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/style.css">    <script src="navigation.js"></script>
-    <title>Week 4 - </title>
+    <link rel="stylesheet" href="../assets/css/styles2.css">
+    <script src="navigation.js"></script>
+    <title>Week 7 React & Coding Paradigms - </title>
 </head>
 <body>
     <div class="header">
@@ -55,10 +56,133 @@
     </div>        
 </header>
     <main>
-        <h2> Week 7 - React & Full Stack
-            • Solutions / most proud of
-            • Errors encountered
-            • What you discovered
-            • Summary of project
+        <h2>Week 7 - Introduction to React JS</h2>
+            <div class="topic">
+                <h3>Understanding React JS</h3>
+                <p>This week, we embarked on exploring React JS, focusing on its role in creating interactive user interfaces (UI). We learned the significance of components and props in building reusable and manageable code structures.</p>
+                <code>&lt;div&gt;Hello React&lt;/div&gt;</code>
+            </div>
+
+            <div class="topic">
+                <h3>Components in React</h3>
+                <p>Components are the building blocks of any React application, and we dove deep into understanding how to write our own. We discussed the differences between class components and functional components.</p>
+                <code>
+                function Welcome(props) {<br>
+                &nbsp;&nbsp;return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;<br>
+                }
+                </code>
+            </div>
+
+            <div class="topic">
+                <h3>Introduction to Props</h3>
+                <p>Props (short for properties) are a way of passing data from parent to child components, making it possible to dynamically render content.</p>
+                <code>
+                function Greeting(props) {<br>
+                &nbsp;&nbsp;return &lt;h1&gt;Hello, {props.name}!&lt;/h1&gt;;<br>
+                }
+                </code>
+            </div>
+
+            <div class="topic">
+                <h3>React's Virtual DOM Explained</h3>
+                <p>We explored how React creates a virtual DOM to efficiently update the user interface by comparing changes in the virtual DOM with the actual DOM.</p>
+                <code>
+                const element = &lt;h1&gt;Hello, world&lt;/h1&gt;;<br>
+                ReactDOM.render(element, document.getElementById('root'));
+                </code>
+            </div>
+
+            <div class="topic">
+                <h3>Passing Props Down the Component Tree</h3>
+                <p>Props allow data to flow down the component tree, enabling complex UIs to be built from simple, isolated components.</p>
+                <code>
+                &lt;Person name="Dave" age="33" /&gt;
+                </code>
+            </div>
+
+            <div class="topic">
+                <h3>Component Composition and Reusability</h3>
+                <p>React encourages the composition of components to create complex UIs while maximizing reusability and manageability.</p>
+                <code>
+                function App() {<br>
+                &nbsp;&nbsp;return (&lt;div&gt;&lt;Welcome name="Sara" /&gt;&lt;/div&gt;);<br>
+                }
+                </code>
+            </div>
+        </section>
+        <section>
+          <div class="topic">
+            <h2>Paradigms</h2>
+                <h3>Imperative</h3>
+               <p><b>procedural</b> •  which groups instructions into procedures,
+                • object-oriented which groups instructions with the part of the state they
+                operate on
+                Declarative
+                • <b>functional</b> in which the desired result is declared as the value of a series
+                of function applications,
+                • <b>logic</b> in which the desired result is declared as the answer to a question
+                about a system of facts and rules,
+                • <b>mathematical</b> in which the desired result is declared as the solution of
+                an optimization problem
+                • <b> </b> in which the desired result is declared with data streams and the
+                propagation of change</p>
+                <h3>Imperative languages</h3>
+                <p>
+                    An imperative language uses a
+                    sequence of statements to determine
+                    how to reach a certain goal.
+                    
+                    These statements are said to change
+                    the state of the program as each one is
+                    executed in turn.
+                    
+                    Examples: Pascal, C, Basic</p>
+                    <img href="../images/pascal.png" alt="pascal">
+                    <div class="topic">
+                        <h3>Introduction to Programming Paradigms</h3>
+                        <p>This week, we delved into various programming paradigms, exploring their characteristics, differences, and applications. We focused on understanding the principles behind each paradigm and how they influence the way we write and organize code.</p>
+                    </div>
+        
+                    <div class="topic">
+                        <h3>Paradigms Covered</h3>
+                        <ul>
+                            <li><strong>Imperative Programming:</strong> Including procedural programming that groups instructions into procedures and object-oriented programming which groups instructions with the part of the state they operate on.</li>
+                            <li><strong>Declarative Programming:</strong> Including functional programming where the desired result is declared as the value of a series of function applications, and logic programming where the desired result is declared as the answer to a question about a system of facts and rules.</li>
+                            <li><strong>Reactive Programming:</strong> The desired result is declared with data streams and the propagation of change.</li>
+                        </ul>
+                    </div>
+        
+                    <div class="topic">
+                        <h3>Key Concepts and Learning</h3>
+                        <ul>
+                            <li><strong>What is a Paradigm?</strong> A paradigm is a standard, perspective, or set of ideas - a way of looking at programming.</li>
+                            <li><strong>Imperative languages</strong> like Pascal, C, and Basic use a sequence of statements to reach a goal, changing the program's state as execution progresses.</li>
+                            <li><strong>Declarative approaches</strong> simplify code writing by focusing on what the program should achieve rather than how to achieve it.</li>
+                            <li><strong>Practical Applications:</strong> We applied these paradigms in coding exercises, highlighting their suitability for various tasks and scenarios.</li>
+                        </ul>
+                        <p>Throughout the week, we engaged in hands-on projects to solidify our understanding of each paradigm, applying them to real-world problems and scenarios.</p>
+                    </div>
+        
+                    <div class="topic">
+                        <h3>Data Handling Across Paradigms</h3>
+                        <p>We explored how different paradigms handle data, from simple procedures and functions in procedural programming to sophisticated object-oriented designs that encapsulate data and behaviors.</p>
+                        <ul>
+                            <li><strong>Event-Driven Programming:</strong> Emphasized the role of events in modern applications, transitioning from simple procedural logic to more complex interactions dictated by user actions or system triggers.</li>
+                            <li><strong>Object-Oriented Programming:</strong> Focused on the concept of classes and objects, offering a deeper dive into encapsulation, inheritance, and polymorphism.</li>
+                        </ul>
+                    </div></section>
+                    <footer>
+                    <div class="external_links_logos">
+                        <a href="https://www.github.com" title="GitHub Profile">
+                            <img src="../assets/images/github-logo.svg" alt="GitHub Logo">
+                        </a>
+                        <a href="https://www.codewars.com" title="Codewars Profile">
+                            <img src="../assets/images/codewars-logo.svg" alt="Codewars Logo">
+                        </a>
+                    </div>
+                    <div class="external-links">
+                        <p>© 2024 Coding Journey by [Your Name]. All rights reserved.</p>
+                    </div>
+                </footer>
 </body>
 </html>
