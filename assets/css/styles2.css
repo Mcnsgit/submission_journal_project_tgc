@@ -89,24 +89,21 @@ body{
 .header {
     display: flex;
     flex-direction: column;
-    justify-content: center;    
-    background-color: #5233c1;
+    justify-content: center;
+    background-color: #333;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
     color: #ffdd00;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
     padding-top: 20px;
-    padding-bottom: 0px;
-    h1{
+}
+
+.header h1 {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 48px;
     text-align: center;
-    }
 }
-/* navigation menu */
 
+/* Navigation menu */
 .main-nav ul {
     display: flex;
     justify-content: center;
@@ -114,113 +111,94 @@ body{
     padding: 0;
 }
 
-.main-nav a {
+.main-nav a,
+.menu-item a {
     color: #ffdd00;
     text-decoration: none;
     margin: 0 15px;
     transition: color 0.3s ease;
 }
 
-.main-nav a:hover {
+.main-nav a:hover,
+.menu-item a:hover {
     color: #fff;
-}
-.menu-item:hover {
-    margin: 0 20px;
-    padding: 0px 0px;
-    color: #ffdd00;
-    cursor: pointer;
     text-decoration: underline;
-    transition: color 0.3s, text-decoration 0.3s;
-}
-
-.sub-menu a {
-    color: #ffdd00;
-    background-color: #ffdd00;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #fff;
-    &:hover {
-        text-decoration: underline;
-    }
 }
 
 .menu-item {
-    /* margin: 10px; */
-    padding:  10px 15px;
+    padding: 10px 15px;
     position: relative;
-    width: max-content;
-    color: #ffdd00;
     cursor: pointer;
     font-weight: bold;
+    text-align: center; /* Center title text */
+    width: max-content; /* Ensure the width is based on content */
 }
-
 .sub-menu {
     display: none;
     position: absolute;
-    list-style-type:none;
-    margin-top: 0px;
-    top: 100%;
     left: 0;
-    background-color: #ffd500;
+    right:0;
+    width: 100%;
+
+    list-style-type: none;
+    top: 100%;
+    border-style: outset;
+    background-color: #ffdd00;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1;
+    text-align: center;
 }
 
 .sub-menu a {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    display: block;
     color: #5521fe;
-    width: auto;
     margin-top: 10px;
-    border-radius: 0px;
     padding: 12px 20px;
-    text-decoration: none;
-    transition: background-color 0s;
-}
+} 
 .sub-menu a:hover {
-    margin: 5px;
-    padding-top: 10px;
-    background-color: #8e8eef;
-    border-radius: 15px;
+    background-color: #5521fe;
     color: #fff;
-}
-
-.sub-menu-level2 {
-    position: relative;
-}
-
-.sub-sub-menu {
-    display:block;
-    position: absolute;
-    left: 50%;
-    top: 0;
+    margin: 0;
     border-radius: 15px;
 }
-
 .menu-item:hover .sub-menu,
 .sub-menu-level2:hover .sub-sub-menu {
     display: block;
-    
+}
+.menu-item:hover .sub-menu {
+    display: block;
 }
 
-
-.navigation-menu {    
-    animation: gradient-shift 8s ease infinite;
-    position:inherit;
+.navigation-menu {
     display: flex;
     align-items: center;
     justify-content: space-around;
     list-style-type: none;
+    width: 100%;
     padding: 8.5px;
-    margin-bottom: 10px;
     font-weight: bold;
     text-transform: uppercase;
     background: linear-gradient(-50deg, #ff758c, #ff7eb3, #ffb300, #302dff);
     background-size: 400% 400%;
+    animation: gradient-shift 8s ease infinite;
 }
+
+#navigation-menu.sticky {
+    position: fixed;
+    top: 0;
+}
+
+/* Remove redundant @media and unused .sub-menu-level2 and .sub-sub-menu styles */
+@media (prefers-reduced-motion:hover) {
+    .menu-item:hover .sub-menu {
+        display: none;
+    }
+    html {
+        scroll-behavior:auto;
+    }
+}
+
 /* keyframes and animation */
 @keyframes gradient-background {
     0% {
@@ -380,6 +358,10 @@ a:hover {
 main, .sql-container, .css-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+
+    /* flex-direction: column; */
     padding: 30px; /* Unified padding */
     background-color: rgba(156, 158, 159, 0.85);
     margin: 30px auto; /* Unified margin */
@@ -459,7 +441,7 @@ main, .sql-container, .css-container {
     margin-bottom: 15px;
 }
 
-.topic ul, .topic code, .week1 {
+ .topic code, .week1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -467,21 +449,12 @@ main, .sql-container, .css-container {
     margin-top: 25px;
 }
 
-.topic ul li {
-    padding: 0.5rem;
-    margin: 0.5rem;
-    border-right: 0.1rem solid #ffdd00;
-}
-
-.topic code {
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    max-width: 800px;
-}
-
 ul {
-    overflow: scroll;
+    padding: 0.5rem;    
+    display: flex;
+    margin: 0.5rem;
+    border-right: 0.1rem solid #ffdd00;  
+    overflow:hidden;
     max-height: 800px;
     list-style-type: none;
     padding: 0;
@@ -490,6 +463,17 @@ ul {
 li {
     margin-bottom: 15px;
 }
+.topic code {
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+}
+
+ 
+
+
+
 
 /* IMAGES FIGURES & CAPTIONS */
 figure {
