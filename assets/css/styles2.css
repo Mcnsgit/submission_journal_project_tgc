@@ -354,8 +354,10 @@ a:hover {
     text-decoration: underline;
 }
 
+
+
 /* Main and Container Styles */
-main, .sql-container, .css-container {
+ .sql-container, .css-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -370,12 +372,25 @@ main, .sql-container, .css-container {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Topic Styles */
-.topic {
-    margin-top: 25px;
-    margin-bottom: 30px;
+main{
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: rgba(156, 158, 159, 0.85);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
-.task-container, .week-summary {
+/* Topic Styles */
+ .topic {
+    background-color: #333;
+    max-width: 900px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin: 20px;
+    
+}
+.week-summary {
     background-color: #333;
     padding: 20px;
     border-radius: 15px;
@@ -441,12 +456,16 @@ main, .sql-container, .css-container {
     margin-bottom: 15px;
 }
 
- .topic code, .week1 {
+ .topic code {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 16px;
     margin-top: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
 }
 
 ul {
@@ -462,12 +481,6 @@ ul {
 
 li {
     margin-bottom: 15px;
-}
-.topic code {
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    max-width: 800px;
 }
 
  
