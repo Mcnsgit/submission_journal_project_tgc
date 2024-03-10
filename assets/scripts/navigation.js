@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    const menuItems = document.querySelectorAll('.drawer-menu .menu-item');
+    const navLinks = document.querySelectorAll('.drawer-menu .menu-item');
 
-    menuItems.forEach(item => {
+    navLinks.forEach(item => { // Fixed variable name from menuItems to navLinks
         item.addEventListener('mouseover', () => {
             item.querySelector('.sub-menu').style.display = 'block';
         });
         item.addEventListener('mouseout', () => {
-            item.querySelector('.sub-menu').style.display = 'block';
+            item.querySelector('.sub-menu').style.display = 'none'; // Changed 'block' to 'none' for mouseout
         });
     });
 });
@@ -62,7 +62,4 @@ function loadNavigation() {
             </div>
         </div>
     </nav>`;
-    document.getElementById('navigation-placeholder').innerHTML = navHtml;
-}
-
-loadNavigati
+ 
