@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../assets/css/styles2.css">
+   <link rel="stylesheet" href="../assets/css/styles1.css">
    <favicon href="/assets/images/favicon.svg" type="image/x-icon">
     <title>Week 2 - </title>
 </head>
@@ -56,67 +56,67 @@
             </nav>
     </header>
     <main>
-        <section class="week-summary"> 
-            <h2> CSS & Relational Databases</h2> 
-            <div class="topic"> 
-                <div class="sql-container"> 
-            <h3>Data Types - SQL</h3> 
-            <p>Reference: <a href="SQL" target="blank">https://www.w3schools.com/sql/sql_datatypes.asp">SQL Data Types at W3Schools</a></p> 
-            <ul> 
-                <li><strong>INT(size):</strong> Integer. Whole numbers. Parameter specifies the maximum display width (up to 255).</li> 
-                <li><strong>FLOAT(p):</strong> A floating-point number. Can hold decimal places.</li> 
-                <li><strong>DECIMAL(size, d):</strong> Fixed decimal point number. The total number of digits is specified in the 'size' parameter, and the number of digits after the decimal point is specified in the 'd' parameter. Maximum 'size' is 65, and maximum 'd' is 30.</li> 
-                <li><strong>CHAR(size):</strong> A fixed-length string (can contain letters, numbers, and special characters). The 'size' parameter specifies the column length in characters, up to 255.</li> 
-                <li><strong>VARCHAR(size):</strong> A variable-length string (can contain letters, numbers, and special characters). The 'size' parameter specifies the maximum string length in characters, up to 65535.</li> 
-                <li><strong>DATE:</strong> A date. Format: YYYY-MM-DD. Supported range is '1000-01-01' to '9999-12-31'.</li> 
-                <li><strong>BOOLEAN:</strong> True or False.</li> 
-            </ul> 
-            <h3>Sample SQL Commands:</h3> 
-            <h4>Creating and Inserting Data into 'Members' Table:</h4> 
-             
-                CREATE TABLE Members (<br> 
-                    MemberNumber int,<br> 
-                    LastName varchar(255),<br> 
-                    FirstName varchar(255),<br> 
-                    Address varchar(255),<br> 
-                    Town varchar(255),<br> 
-                    PostCode varchar(255)<br> 
-                );<br> 
-                <br>
-                INSERT INTO Members VALUES<br> 
-                    (1, 'Mather', 'Paul', '123 Tutor Street', 'Manchester', 'M20 Y2B'),<br> 
-                    (2, 'Clark', 'Phillip', '18 Lyon Grove', 'Manchester', 'M9 J77'),<br> 
-                    (3, 'Wilson', 'Sarah', 'Oak House, Oakwood Lane', 'Stockport', '5K3 9JJ');<br> 
-             
-            </div> 
-        </div> 
-        <div class="topic"> 
-            <div class="css-container">
-
-            <h3>CSS Enhancements and Properties</h3> 
-            <h4> Throughout this week, we delved into CSS by exploring various properties that enhance the visual appeal and layout of web pages. Key CSS properties we covered include: </h4>
-                <p>
-                <ul> 
-                    <li><strong>Transform Property:</strong> Used for rotating, scaling, skewing, and moving elements. It's essential for creating dynamic, interactive user interfaces.</li> 
-                    <li><strong>Box Shadow:</strong> Adds shadow effects around elements. We learned to control the shadow's blur, spread, color, and position, adding depth and emphasis to elements.</li> 
-                    <li><strong>Position:</strong> Controls the positioning of elements. We explored different values like static, relative, absolute, fixed, and sticky, understanding their impact on layout and design.</li> 
-                    <li><strong>Background Property:</strong> Used for setting background images and colors for elements. We experimented with gradients, multiple backgrounds, and controlling their size and position.</li> 
-                    <li><strong>Flexbox:</strong> A layout model that allows responsive design with flexible and efficient arrangements of elements within a container.</li> 
-                    <li><strong>Grid Layout:</strong> Provides a grid-based layout system, offering a more structured and versatile method for designing complex layouts.</li> 
-                    <li><strong>Transitions:</strong> For creating smooth animations on CSS property changes, enhancing user experience through interactive feedback.</li> 
-                    <li><strong>Media Queries:</strong> Essential for creating responsive designs, allowing CSS to adapt to different screen sizes and orientations.</li> 
-                </ul> 
-            </p> 
-        </div> 
-        </div>
+        <section class="week-summary">
+            <h2 class="week-summary__title">CSS & Relational Databases</h2>
+            <div class="week-summary__content">
+                <div class="topic">
+                    <h3 class="topic__title">Data Types - SQL</h3>
+                    <p class="topic__content">
+                        <b>Reference: 
+                            <a href="https://www.w3schools.com/sql/sql_datatypes.asp" target="_blank" class="topic__link">
+                                SQL Data Types at W3Schools
+                            </a>
+                        </b>
+                    </p>
+                    <ul class="topic__list"> 
+                        <li class="topic__item"><strong>INT(size):</strong> Integer. Whole numbers. Parameter specifies the maximum display width (up to 255).</li> 
+                        <li class="topic__item"><strong>FLOAT(p):</strong> A floating-point number. Can hold decimal places.</li> 
+                        <li class="topic__item"><strong>DECIMAL(size, d):</strong> Fixed decimal point number. The total number of digits is specified in 'size', and the number of digits after the decimal point in 'd'. Maximum 'size' is 65, and 'd' is 30.</li> 
+                        <li class="topic__item"><strong>CHAR(size):</strong> A fixed-length string. The 'size' parameter specifies the column length in characters, up to 255.</li> 
+                        <li class="topic__item"><strong>VARCHAR(size):</strong> A variable-length string. The 'size' parameter specifies the maximum string length in characters, up to 65535.</li> 
+                        <li class="topic__item"><strong>DATE:</strong> A date. Format: YYYY-MM-DD. Supported range is '1000-01-01' to '9999-12-31'.</li> 
+                        <li class="topic__item"><strong>BOOLEAN:</strong> True or False.</li> 
+                    </ul>
+                    <div class="code-block">
+                        <code class="code-block__content">
+                            CREATE TABLE Members (
+                                MemberNumber int,
+                                LastName varchar(255),
+                                FirstName varchar(255),
+                                Address varchar(255),
+                                Town varchar(255),
+                                PostCode varchar(255)
+                            );
+                            INSERT INTO Members VALUES
+                                (1, 'Mather', 'Paul', '123 Tutor Street', 'Manchester', 'M20 Y2B'),
+                                (2, 'Clark', 'Phillip', '18 Lyon Grove', 'Manchester', 'M9 J77'),
+                                (3, 'Wilson', 'Sarah', 'Oak House, Oakwood Lane', 'Stockport', '5K3 9JJ');
+                        </code>
+                    </div>
+                </div>
+                <div class="topic">
+                    <h3 class="topic__title">CSS Enhancements and Properties</h3>
+                    <p class="topic__content">Throughout this week, we delved into CSS by exploring various properties that enhance the visual appeal and layout of web pages. Key CSS properties we covered include:</p>
+                    <ul class="topic__list">
+                        <li class="topic__item"><strong>Transform Property:</strong> Used for rotating, scaling, skewing, and moving elements.</li>
+                        <li class="topic__item"><strong>Box Shadow:</strong> Adds shadow effects around elements.</li>
+                        <li class="topic__item"><strong>Position:</strong> Controls the positioning of elements.</li>
+                        <li class="topic__item"><strong>Background Property:</strong> Used for setting background images and colors for elements.</li>
+                        <li class="topic__item"><strong>Flexbox:</strong> A layout model that allows responsive design with flexible arrangements of elements within a container.</li>
+                        <li class="topic__item"><strong>Grid Layout:</strong> Provides a grid-based layout system for designing complex layouts.</li>
+                        <li class="topic__item"><strong>Transitions:</strong> For creating smooth animations on CSS property changes.</li>
+                        <li class="topic__item"><strong>Media Queries:</strong> Essential for creating responsive designs, allowing CSS toTo refactor the `week2.html` content using the current CSS components and rules, we'll ensure that the HTML structure aligns with the CSS class naming conventions and styles already defined. This involves applying the appropriate classes to elements, ensuring that the CSS enhancements are effectively utilized.
+                    </ul> 
+                </div> 
+            </div>
         </section>
         <footer>
             <div class="external_links_logos">
-                <a href="https://www.github.com/mcnsgit" title="GitHub Profile">
-                    <img src="/assets/images/iconmonstr-github-5.svg" alt="GitHub Logo"> <!-- Correct the image source -->
+                <a href="https://www.github.com/mcnsgit" title="GitHub Profile" class="external_links_logos__link">
+                    <img src="../assets/images/iconmonstr-github-5.svg" alt="GitHub Logo" class="external_links_logos__img">
                 </a>
-                <a href="https://www.codewars.com/users/Mcnsgit" title="Codewars Profile">
-                    <img src="/assets/images/logo.svg" alt="Codewars Logo"> <!-- Correct the image source -->
+                <a href="https://www.codewars.com/users/Mcnsgit" title="Codewars Profile" class="external_links_logos__link">
+                    <img src="../assets/images/logo.svg" alt="Codewars Logo" class="external_links_logos__img">
                 </a>
             </div>  
             <div class="external-links">
@@ -124,5 +124,4 @@
         </div>
         </footer>
 </body>
-
 </html>

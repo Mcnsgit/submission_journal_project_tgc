@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    const navLinks = document.querySelectorAll('.drawer-menu .menu-item');
+document.addEventListener('DOMContentLoaded', () => {
+    loadNavigation(); // Ensure this function is called to load your navigation
 
     navLinks.forEach(item => { // Fixed variable name from menuItems to navLinks
         item.addEventListener('mouseover', () => {
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             item.querySelector('.sub-menu').style.display = 'none'; // Changed 'block' to 'none' for mouseout
         });
     });
-});
+
 
 function loadNavigation() {
     var navHtml = `<nav class="navigation-menu">
@@ -62,4 +62,4 @@ function loadNavigation() {
             </div>
         </div>
     </nav>`;
- 
+    

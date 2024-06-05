@@ -528,7 +528,7 @@ main {
     margin-bottom: 15px;
 }
 
- .topic code {
+.topic {
     display: flex;
     justify-content: center;
     align-items: center;

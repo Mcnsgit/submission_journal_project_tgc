@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 - </title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="navigation.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Journal - WEEK 5 - </h1>
+        <nav class="navigation-menu">
+            <div class="menu-item">
+                <span>Home</span>
+                <div class="sub-menu">
+                    <a href="../index.html">Home</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <span>About Me</span>
+                <div class="sub-menu">
+                    <a href="about_me.html">About Me</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="cv.html">CV</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <span>TGC - Software Development Course</span>
+                <div class="sub-menu">
+                    <!-- Week Links -->
+                    <a href="/pages/week1.html">Week 1</a>
+                    <a href="/pages/week2.html">Week 2</a>
+                    <a href="/pages/week3.html">Week 3</a>
+                    <a href="/pages/week4.html">Week 4 </a>
+                    <a href="/pages/week5.html">Week 5</a>
+                    <a href="/pages/week6.html">Week 6</a>
+                    <a href="/pages/week7.html">Week 7</a>
+                    <a href="/pages/week8.html">Week 8</a>
+                    <a href="/pages/week9.html">Week 9</a>
+                    <a href="/pages/week10.html">Week 10</a>
+                    <a href="/pages/week11.html">Week 11</a>
+                </div>
+            </div>
+            <div class="menu-item">
+                <span>Challenges & Projects </span>
+                <div class="sub-menu">
+                    <a href="projects.html">Projects</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="js_challenges.html">JavaScript</a>
+                    <a href="sql_challenges.html">SQL</a>
+                </div>
+            </div>
+    </div>
+    </nav>
+    </header>
+    <main>
+        <h2>JS Intermediate & Development Lifecycle / NodeJS </h2>
+        <div class="topic">
+            <article>
+                <h3>JavaScript Execution Context</h3>
+                <h4> JavaScript Engine:</h4>
+                <p>
+                <ul>
+                    <li> • Single threaded - only one task at a time </li>
+                    <li> • Every browser has its own JavaScript Engine </li>
+                    <li> • They need an engine to understand JavaScript code </li>
+                    <li> •It interprets the code, and they executes </li>
+                </ul>
+                </p>
+                <p>
+                <h4> Execution Context:</h4>
+                <ul>
+                    <li>• The Execution Context handles the execution of the code</li>
+                    <li> • During runtime the parser parses* the source code and allocates memory for variables and
+                        functions (*analysing and breaking down structured data, like text or code, into its individual
+                        components to understand or process it)</li>
+                    <li> • The source code is then generated and get executed </li>
+                </ul>
+                </p>
+                <h5> <a href="https://www.freecodecamp.org/news/how-javascript-works-behind-the-scene-javascript-execution-context/"
+                        target="_blank">reecodecamp - How JavaScript Works Behind the Scene</a></h5>
+                <h4> Call Stack</h4>
+                <p>
+                <ul>
+                    <li> • The Call Stack is a data structure that uses the Last In, First Out (LIFO) principle to
+                        temporarily store and manage function invocation (call)</li>
+                    <li> • When a function is invoked (called), the function, its parameters, and variables are pushed
+                        into the call stack to form a stack frame</li>
+                    <li> • When the function returns, the stack frame is popped from the stack</li>
+                </ul>
+                <div class="Task-container">
+                    <h5> Tasks</h5>
+                    <p>
+                        Add to the call stack the maximum and correct calling of the functions that were created. Then write the order of the functions in the call stack
+                   </p>
+                   <div class="Task">
+                    <h4>Task 1</h4>
+                    <code>
+                        // Stack funcB() , Global Execution Context
+                        <ul>
+                            <li>let funcA = () => {
+                            return 'funcA'
+                            }</li>
+                            
+                            <li>let funcB = () => {
+                            return 'funcB'
+                            }</li>
+                            
+                            <li>let funcC = () => {
+                            return 'funcC'
+                            }</li>
+                            
+                            <li>let funcD = () => {
+                            return 'funcD'
+                            }</li>
+                            
+                            
+                            <li>let which1 = funcB()</li>
+                            <li>let which2 = funcC()</li>
+                            <li>let which3 = funcD()</li>
+                            <li>let which4 = funcA()</li>
+                            </ul>
+
+                            //Answer: Stack = funcA(), funcD(), funcC(), funcB(), funcA() , Global Execution Context
+                            </code>
+                    </div>
+                    <div class="Task">
+                    <h4>Task 2</h4>
+                    <code>
+                        <ul>
+                        let checker = (input) => {
+                        if (input.length <= 5){
+                            return '6 characters or more'
+                        } else {
+                            return input
+                        }
+                    }
+                    <br>
+                    <code>let multiply = (num) => {
+                        return num * 9/5
+                        }
+                    </code>
+                    <br>
+                    <code>let adder = (num) => {
+                        return multiply(num) + 32
+                    }
+                    </code>
+                    <br>
+                    
+                    let rand = () => {
+                        return Math. round(Math.random()) > 0 ? true : false
+                    }
+                    
+                    
+                    
+                    let option = () => {
+                        let decision = rand()
+                        if (decision) {
+                            return 'decision is yes'
+                        } else {
+                        return 'decision is no'
+                        }
+                    }</ul>
+                    </code>
+                    <br>
+                    <code>
+                        <ul>
+                            <li>let name = checker('Aragon')</li>
+                            <li>let pass = option()</li>
+                            <li>let convert = adder(15)</li>
+                            <li>let multi = multiply(4)</li>
+                            <li>let nextStage = rand()</li>
+                        </ul>
+                        //Answer: Stack = rand(), multiply(), multiply(), Adder(),rand(),Option(), chacker(), Globag Execution Context
+                    
+                </code>
+                    </p>
+                    <p> Answer : Stack = rand(), multiply(), multiply(), Adder(),rand(),Option(), chacker(), Globag
+                        Execution Context</p>
+                    </div>
+                </div>
+                <div class="topic">
+                    <h2> Databases with MongoDB</h2>
+                    <h3> MongoDB Terms/Concepts</h3> 
+                    <ul>
+                        <li> <mark>Database</mark> - A collection of data</li>
+                        <li> <mark>Collection</mark> - A table of data</li>
+                        <li> <mark>Document</mark> - A row in a collection</li>
+                        <li> <mark>Field</mark> - A column in a row</li>
+                    </ul>
+                    <table>
+                        <tr>
+                            <th>SQL Terms/Conceptd</th>
+                            <th>MongoDB Terms/Concepts</th>
+                        </tr>
+                        <tr>
+                            <td>Database</td>
+                            <td>Database</td>
+                        </tr>
+                        <tr>
+                            <td>Table</td>
+                            <td>Collection</td>
+                        </tr>
+                        <tr>
+                            <td>Row</td>
+                            <td>Document or BSON documents </td>
+                        </tr>
+                        <tr>
+                            <td>Column</td>
+                            <td>Field</td>
+                        </tr>
+                        <tr>
+                            <td>Primary Key</td>
+                            <td>Primary Key</td>
+                        </tr>
+                        <tr>
+                            <td>table joins</td>
+                            <td>$lookup, embedded documents</td>
+                        </tr>
+                    </table>
+                    <h3>Arrays in MongoDB </h3>
+                    <h4> Example: </h4>
+                        <code>
+                            db.cars.insertOne({
+                            Model: "C'eed",
+                            Version: "GT Line",
+                            Fuel:
+                                ["Petrol", "Hybrid"],
+                            Colours:
+                                ["Metallic Bronze",
+                                "Metallic Blue",
+                                "White",
+                                "Black"]
+                            })
+                        </code>
+                        <h4>Querying arrays</h4>
+                        <p> The following example queries for all documents where the field 'Fuel' value is an array with exactly two elements in the specified order:</p>
+                            <code>db.cars.find( { Fuel: ["Petrol", "Hybrid"] } )</code>
+                        <h4>Querying arrays using $all</h4>
+                        <p> The following example queries for all documents where the field 'Fuel' value is an array with exactly two elements in the specified order:</p>
+                            <code>db.cars.find( { Fuel: { $all: ["Petrol", "Hybrid"] } } )</code>
+                        <h4> Querying in Compass</h4>
+                        <img src="../assets/images/queryingInCompass.png" alt="compass">
+                        <h3> Operators</h3>
+                        <p>
+                            The following operators can be used in queries to compare values:
+
+                            <ul>
+                                <li> <mark>$eq</mark> - Equal to</li>
+                                <li> <mark>$gt</mark> - Greater than</li>
+                                <li> <mark>$gte</mark> - Greater than or equal to</li>
+                                <li> <mark>$lt</mark> - Less than</li>
+                                <li> <mark>$lte</mark> - Less than or equal to</li>
+                                <li> <mark>$ne</mark> - Not equal to</li>
+                                <li> <mark>$in</mark> - In</li>
+                            </ul>
+                        </p>
+                        <h3> Aggregation</h3>
+                        <p>
+                            Aggregation operations allow you to group, sort, perform calculations, analyze data, and much more. 
+                            Aggregation pipelines can have one or more "stages". The order of these stages are important. Each stage acts upon the results of the previous stage.
+                        </p>
+                        <h4> Example - Count</h4>
+                        <code>
+                            Vehicles> db.cars.aggregate([{$count: "Model"}]) [ { Model: 6 } ]
+                            Vehicles>
+                        </code>
+                        <h4> Example - Grouping</h4>
+                        <code>
+                            db.Books.aggregate([{$group: {_id: "$genre"}}])
+                        </code>
+                        <h4> Example - Sorting</h4>
+                        <code>
+                            db. Books.aggregate([ {$sort: {"genre": -1}}])
+
+                            -1 : descending
+                            +1 : ascending                        
+                        </code>
+                        <
+
+
+
+                </div>
+                <div class=" reference-links">
+                    <h5>Reference Links</h5>
+                    <ul>
+                        <li><a href="https://www.freecodecamp.org/news/how-javascript-works-behind-the-scene-javascript-execution-context/"
+                                target="_blank">reecodecamp - How JavaScript Works Behind the Scene</a></li>
+                        <li><a href="https://dev.to/bipinrajbhar/how-javascript-works-web-apis-callback-queue-and-event-loop-2p3e"
+                                target="_blank">Dev.to - How JavaScript Works Web APIs, Callback Queue and Event Loop </a>
+                        </li>
+                        <li><a href="https://www.freecodecamp.org/news/javascript-async-await/"
+                            target="_blank">freeCodeCamp - JavaScript Async/Await</a>
+                        </li>
+                        <li><a href="https://www.geeksforgeeks.org/what-is-the-call-stack-in-javascript/" 
+                            target="_blank">GeeksforGeeks - "What is the Call Stack in JavaScript"</a>
+                        </li>
+                        <li><a href="https://www.w3schools.com/mongodb/mongodb_aggregations_intro.php" 
+                            target="_blank">W3Schools - MongoDB Aggregation</a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            
+        
+        </div>
+
+        • Solutions / most proud of
+        • Errors encountered
+        • What you discovered
+        • Summary of project
+</body>
+
+</html>

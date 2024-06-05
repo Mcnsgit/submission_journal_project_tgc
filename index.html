@@ -20,6 +20,8 @@
      </div>
      <header>
         <nav class="navigation-menu">
+            <div id="navigation-menu"></div>
+
             <!-- Navigation links will be dynamically inserted here -->
         </nav>
     </header>
@@ -32,20 +34,26 @@
                 development and information systems. In this website you will find a summary of my learning journey in
                 Software Development and some of the projects I created during the course, and others that I have worked on for fun and practice(not all will be finished products just more of a way to sort out my coding "notes" ). The projects so far will be mostly in Python, HTML, CSS, and JavaScript </p>
             </div>
-        <div class="skills">
-            <div class="skills__item"><img src="./assets/images/logo_html5_icon.png" alt="HTML5" class="skills__image"></div>
-            <div class="skills__item"><img src="assets/images/logo_css3_icon.png" alt="CSS3" class="skills__image"></div>
-            <div class="skills__item"><img src="assets/images/logo_javascript_icon.png" alt="JavaScript" class="skills__image"></div>
-            <div class="skills__item"><img src="assets/images/logo_react_icon.png" alt="React" class="skills__image"></div>
-            <div class="skills__item"><img src="assets/images/logo_python_icon.png" alt="Python" class="skills__image"></div>
-            <div class="skills__item"><img src="assets/images/logo_firebase_icon.png" alt="Firebase" class="skills__image"></div>
-        </div>
-        
+            <div class="skills__container">
+                <div class="skills__title_container">
+                    <h2>Skills</h2>
+                </div>
+            <div class="skills">
+                <div class="skills__item"><img src="./assets/images/logo_html5_icon.png" alt="HTML5" class="skills__image"></div>
+                <div class="skills__item"><img src="assets/images/logo_css3_icon.png" alt="CSS3" class="skills__image"></div>
+                <div class="skills__item"><img src="assets/images/logo_javascript_icon.png" alt="JavaScript" class="skills__image"></div>
+                <div class="skills__item"><img src="assets/images/logo_react_icon.png" alt="React" class="skills__image"></div>
+                <div class="skills__item"><img src="assets/images/logo_python_icon.png" alt="Python" class="skills__image"></div>
+                <div class="skills__item"><img src="assets/images/logo_firebase_icon.png" alt="Firebase" class="skills__image"></div>
+            </div>
+        </div>                 <div class="week-summary__container">
+        <div class="week-summary__content">
         <section class="week-summary" id="week-1">
             <h2 class="week-summary__title">Week 1: JS Fundamentals</h2>
             <div class="week-summary__content">
                 <p>This week focused on JavaScript fundamentals and an introduction to databases. We covered data types, variable and constant declaration, data structures like arrays and objects, and different types of loops such as for and while. Additionally, we introduced database basics, SQL operations, and CRUD operations in SQL databases.</p>
             </div>
+        </div>
             <div class="week-summary__improvements">
                 <h3>Improvements and Achievements</h3>
                 <p>I improved my understanding of JavaScript's control flow and error handling, particularly in using try/catch blocks. I am most proud of successfully implementing a complex function using array methods.</p>
@@ -123,7 +131,6 @@
         <section class="projects">
             <section class="project-details">
                 <h3 class="project__title">Project Details</h3>
-                <!-- Add project details here -->
             </section>
         </section>
         <section class="contact">
@@ -138,12 +145,13 @@
 
     </main>
     <footer>
-        <div class="external_links_logos"> <!-- Ensure class name matches the one in CSS -->
-            <a href="https://www.github.com/mcnsgit" title="GitHub Profile">
-                <img src="/assets/images/iconmonstr-github-5.svg" alt="GitHub Logo"> <!-- Correct the image source -->
+        <div class="external_links_logos"> 
+            <a href="https://www.github.com/mcnsgit"title="GitHub Profile">
+                <img src="assets/images/github-logo.svg" alt="GitHub Logo"> 
             </a>
+            <br>
             <a href="https://www.codewars.com/users/Mcnsgit" title="Codewars Profile">
-                <img src="/assets/images/logo.svg" alt="Codewars Logo"> <!-- Correct the image source -->
+                <img src="assets/images/codewars-logo.svg" alt="Codewars Logo">
             </a>
         </div>
         <br>
@@ -152,6 +160,6 @@
         </div>
 
     </footer></div> 
+    <script src="./assets/scripts/navigation.js" defer></script>
 </body>
-
 </html>
