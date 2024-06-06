@@ -1,5 +1,5 @@
 import React from 'react';
-import CodeSnippet from '../components/CodeSnippet';
+import CodeSnippet from '../CodeSnippet';
 
 
 const Week7 = () => {

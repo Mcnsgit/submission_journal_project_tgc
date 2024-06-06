@@ -1,6 +1,6 @@
 
 import React from 'react';
-import PageComponent from '../components/PageComponent';
+import PageComponent from '../PageComponent';
 
 function Week3() {
     return (

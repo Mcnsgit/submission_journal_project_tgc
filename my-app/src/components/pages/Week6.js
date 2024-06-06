@@ -1,6 +1,6 @@
 import React from 'react';
-import ImageDisplay from '../components/ImageDisplay'; // Adjust the path to where your component is located
-import LiveDemo from '../components/liveDemo';
+import ImageDisplay from '../ImageDisplay'; // Adjust the path to where your component is located
+import LiveDemo from '../liveDemo';
 
 const Week6 = () => {
     return (

@@ -1,22 +1,23 @@
-const Footer = () => {
-    return (
-        <footer>
-        <div class="external_links_logos"> 
-            <a href="https://www.github.com/mcnsgit"title="GitHub Profile">
-                <img src="assets/images/github-logo.svg" alt="GitHub Logo"/> 
-            </a>
-            <a href="https://www.codewars.com/users/Mcnsgit" title="Codewars Profile">
-                <img src="assets/images/codewars-logo.svg" alt="Codewars Logo" /> 
-            </a>
-        </div>
+import React from 'react';
 
-        <div class="external-links">
+const Footer = () => (
+    <footer>
+        <div className="external_links_logos"> 
+            {externalLinks.map(({ href, title, imgSrc, imgAlt }) => (
+                <a key={href} href={href} title={title}>
+                    <img src={imgSrc} alt={imgAlt}/> 
+                </a>
+            ))}
+        </div>
+        <div className="external-links">
             <p>© 2024 Journal by Miguel Cardiga. All rights reserved.</p>
         </div>
-
     </footer>
-    );
-};
+);
+
+const externalLinks = [
+    { href: "https://www.github.com/mcnsgit", title: "GitHub Profile", imgSrc: "assets/images/github-logo.svg", imgAlt: "GitHub Logo" },
+    { href: "https://www.codewars.com/users/Mcnsgit", title: "Codewars Profile", imgSrc: "assets/images/codewars-logo.svg", imgAlt: "Codewars Logo" }
+];
 
 export default Footer;
-
