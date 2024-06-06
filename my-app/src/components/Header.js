@@ -16,7 +16,7 @@ const Header = ({ title }) => (
 
 const menuItems = [
     { label: "Home", links: ["/homepage"] },
-    { label: "About Me", links: ["/About", "/portfolio", "/cv"] },
+    { label: "About Me", links: ["/About", "/Portfolio", "/cv"] },
     { label: "TGC - Software Development Course", links: ["/week1", "/week2", "/week3", "/week4", "/week5", "/week6", "/week7", "/week8", "/week9", "/week10", "/week11"] },
     { label: "Challenges & Projects", links: ["/projects_challenges/relational_Databases", "/projects_challenges/js_challenges", "/projects_challenges/sql_challenge", "/employability"] }
 ];
